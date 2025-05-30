@@ -32,6 +32,14 @@
 		methods: {
 			onPreviewImage(url) {
 				console.log('onPreviewImage url', url)
+				// wx.previewImage({
+				// 	urls: this.pictures.map(v=>v.url),
+				// 	current: url
+				// })
+				uni.previewImage({
+					urls: this.pictures.map(v=>v.url),
+					current: url
+				})
 			}
 		}
 	}
